@@ -13,6 +13,7 @@ cd "$PROJECT_PATH"
 npm init -y
 npm install express
 npm install body-parser cors dotenv
+npm install bcrypt
 npm install sequelize pg
 npm install --save-dev sequelize-cli
 npm install nodemon -D
@@ -115,10 +116,15 @@ package-lock.json" >> .gitignore
 
 #create react app
 npx create-react-app client
+cd client/
+npm i react-router-dom
+npm i axios
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+cd src
 
-cd client/src
-
-mkdir components pages styles assets
+mkdir assets components pages services styles
 rm -rf setupTests.js reportWebVitals.js logo.svg index.css App.test.js App.css
 
 echo "import React from 'react';
